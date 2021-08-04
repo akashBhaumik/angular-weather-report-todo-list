@@ -9,16 +9,6 @@
 <div class="row" *ngIf="weatherData">
     <div class="col-md-12 text-center " >
         <div id="divWeatherMain">
-            <!-- <div *ngIf="this.weatherData.isDay else elseblock">
-                <i  class="fa fa-moon-o moon" ></i> -->
-            <!-- </div>
-            <ng-template #elseblock>
-              <div>
-                <i class="fa fa-sun-o sun" ></i>
-              </div>
-            </ng-template> -->
-            <!-- <i *ngIf="weatherData.isNight" class="fa fa-moon-o moon" ></i>
-            <i *ngIf="!weatherData.isDay" class="fa fa-sun-o sun" ></i> -->
             
             <i *ngIf="weatherData.isDay" class="fa fa-sun-o sun" ></i>
             <i *ngIf="!weatherData.isDay" class="fa fa-moon-o moon" ></i>

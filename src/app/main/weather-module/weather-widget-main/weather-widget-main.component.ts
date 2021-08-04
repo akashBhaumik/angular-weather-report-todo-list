@@ -44,12 +44,6 @@ this.weatherData.cityDate = new Date(utc + (this.weatherData.timezone * 1000));
   console.log(sunriseTime)
   console.log(sunsetTime)
  
-  
-  // this.weatherData.isDay = currentDate.getTime() < sunriseTime.getTime();
-
-  // this.weatherData.isNight = currentDate.getTime() < sunsetTime.getTime();
-  // this.weatherData.isDay = currentDate.getTime() > sunriseTime.getTime();
-  // this.weatherData.isNight = currentDate.getTime()  > (sunsetTime.getTime() )
   this.weatherData.isDay = (currentDate.getTime()  < sunsetTime.getTime());
   console.log(this.weatherData.isDay)
   console.log(this.weatherData.isNight)
