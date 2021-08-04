@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodoModule } from './todo/todo.module';
 
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -16,7 +17,8 @@ import { TodoModule } from './todo/todo.module';
     HttpClientModule,
     MainRoutingModule,
     WeatherModuleModule,
-    TodoModule
+    TodoModule,
+  
   ]
 })
 export class MainModule { }

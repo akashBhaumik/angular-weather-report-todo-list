@@ -1,26 +1,35 @@
-
 <div class="row marginTop">
-    <div class="col-md-12 text-center " >
-        <input type="text" placeholder="City Name" [(ngModel)]="cityName" class="searchInput">
-        <button (click)="search()">Search</button>
+    <div class="col-md-12 text-center ">
+        <!-- <input type="text" placeholder="City Name" [(ngModel)]="cityName" class="searchInput"> -->
+         
+        <mat-form-field class="example-full-width searchInput"  appearance="fill">
+            <input matInput   [(ngModel)]="cityName" >
+          </mat-form-field>
+         
+
+        <button mat-button (click)="search()" class="btn btn-light text-success">Search</button>
+
     </div>
 
 </div>
 <div class="row" *ngIf="weatherData">
-    <div class="col-md-12 text-center " >
+    <div class="col-md-12 text-center ">
         <div id="divWeatherMain">
-            
-            <i *ngIf="weatherData.isDay" class="fa fa-sun-o sun" ></i>
-            <i *ngIf="!weatherData.isDay" class="fa fa-moon-o moon" ></i>
-            
+
+            <i *ngIf="weatherData.isDay" class="fa fa-sun-o sun"></i>
+            <i *ngIf="!weatherData.isDay" class="fa fa-moon-o moon"></i>
+
             <i class="fa fa-cloud cloud"></i>
-        <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;" >{{weatherData.tmp_celcius}}&#x2103; </div>
-        <div class="weatherWidgetRow" style="font-size: 12px;">Min : {{weatherData.tmp_min}} &#x2103; &nbsp;/&nbsp; Max : {{weatherData.tmp_max}} &#x2103;</div>
-        <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like : {{weatherData.tmp_feels_like}} &#x2103;</div>
-        <div class="weatherWidgetRow" style="font-size: 25px;margin-top:10px ;">{{weatherData.name}}</div>
-        <div class="weatherWidgetRow" style="font-size: 12px;">Humidity : {{weatherData.main.humidity}}%</div>
-        <div class="weatherWidgetRow" style="font-size: 25px;margin-top:10px ;">{{weatherData.cityDate}}</div>
-       
+            <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">{{weatherData.tmp_celcius}}&#x2103;
+            </div>
+            <div class="weatherWidgetRow" style="font-size: 12px;">Min : {{weatherData.tmp_min}} &#x2103; &nbsp;/&nbsp;
+                Max : {{weatherData.tmp_max}} &#x2103;</div>
+            <div class="weatherWidgetRow" style="font-size: 12px;">Feels Like : {{weatherData.tmp_feels_like}} &#x2103;
+            </div>
+            <div class="weatherWidgetRow" style="font-size: 25px;margin-top:10px ;">{{weatherData.name}}</div>
+            <div class="weatherWidgetRow" style="font-size: 12px;">Humidity : {{weatherData.main.humidity}}%</div>
+            <div class="weatherWidgetRow" style="font-size: 25px;margin-top:10px ;">{{weatherData.cityDate}}</div>
+
         </div>
     </div>
 </div>

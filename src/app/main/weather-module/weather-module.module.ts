@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { WeatherModuleRoutingModule } from './weather-module-routing.module';
 import { FormsModule } from '@angular/forms';
 import { WeatherWidgetMainComponent } from './weather-widget-main/weather-widget-main.component';
+import { ShareModule } from 'src/app/shared/share/share.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { WeatherWidgetMainComponent } from './weather-widget-main/weather-widget
     CommonModule,
     FormsModule,
     WeatherModuleRoutingModule,
+    ShareModule
   ]
 })
 export class WeatherModuleModule { }
